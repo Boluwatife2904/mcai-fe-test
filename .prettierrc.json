@@ -4,8 +4,9 @@
 	"endOfLine": "auto",
 	"semi": true,
 	"singleQuote": false,
-	"printWidth": 200,
+	"printWidth": 500,
 	"htmlWhitespaceSensitivity": "ignore",
 	"bracketSameLine": true,
-	"bracketSpacing": true
+	"bracketSpacing": true,
+	"plugins": ["prettier-plugin-tailwindcss"]
 }
