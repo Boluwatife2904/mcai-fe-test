@@ -1,0 +1,32 @@
+input,
+button {
+	font: inherit;
+}
+
+button {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+
+	&:focus {
+		outline: none;
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+	}
+}
+
+svg {
+	flex-shrink: 0;
+}
+
+.nuxt-icon {
+	display: block;
+
+	svg {
+		width: initial !important;
+		height: initial !important;
+		margin-bottom: 0 !important;
+	}
+}

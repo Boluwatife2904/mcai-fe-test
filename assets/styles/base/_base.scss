@@ -1,0 +1,19 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-size: 62.5%;
+}
+
+body {
+	font-feature-settings:
+		"clig" off,
+		"liga" off;
+	font-family: "Phantom Sans", sans-serif;
+	font-size: 1.6rem;
+	line-height: normal;
+}
