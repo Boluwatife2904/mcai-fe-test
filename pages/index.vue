@@ -28,6 +28,8 @@ const activeTab = ref("transactions");
 		<BaseBadge variant="success">Good condition</BaseBadge>
 
 		<BaseTabSwitcher v-model="activeTab" :tabs="tabs" />
+
+		<DashboardLatestActivityList />
 	</div>
 </template>
 
