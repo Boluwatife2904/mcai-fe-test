@@ -6,7 +6,7 @@ export default <Partial<Config>>{
 		extend: {
 			colors: {
 				dark: "#141518",
-				"error": "#FA483C",
+				error: "#FA483C",
 				gray: "#A9A5AF",
 				"gray-25": "#FAFBFD",
 				"gray-60": "#3C4254",
@@ -15,6 +15,7 @@ export default <Partial<Config>>{
 				"gray-400": "#98A2B3",
 				"gray-500": "#667085",
 				"gray-600": "#475467",
+				"gray-700": "#344054",
 				"gray-900": "#101828",
 				grey: "#E5E6ED",
 				mcai: "#3BAA90",

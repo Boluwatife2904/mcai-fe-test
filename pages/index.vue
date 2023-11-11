@@ -1,11 +1,20 @@
 <script setup lang="ts">
 definePageMeta({
-	middleware: () => navigateTo({ name: "login" }),
+	// middleware: () => navigateTo({ name: "login" }),
 });
+
+const buttonGroup = [
+	{ label: "Claim", value: "claim" },
+	{ label: "Others", value: "others" },
+];
+
+const activeGroup = ref("claim");
 </script>
 
 <template>
-	<div></div>
+	<div>
+		<BaseButtonGroup v-model="activeGroup" :group="buttonGroup" />
+	</div>
 </template>
 
 <style scoped></style>
