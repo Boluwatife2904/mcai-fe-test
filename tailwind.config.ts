@@ -16,6 +16,7 @@ export default <Partial<Config>>{
 				"gray-500": "#667085",
 				"gray-600": "#475467",
 				"gray-700": "#344054",
+				"gray-800": "#1D2939",
 				"gray-900": "#101828",
 				grey: "#E5E6ED",
 				mcai: "#3BAA90",

@@ -8,7 +8,14 @@ const buttonGroup = [
 	{ label: "Others", value: "others" },
 ];
 
+const tabs = [
+	{ label: "Transactions", value: "transactions", position: "left" },
+	{ label: "User insights", value: "user-insights", position: "left" },
+	{ label: "Service dashboard", value: "service-dashboard", position: "right" },
+];
+
 const activeGroup = ref("claim");
+const activeTab = ref("transactions");
 </script>
 
 <template>
@@ -19,6 +26,8 @@ const activeGroup = ref("claim");
 		<BaseBadge variant="failed" text="Failed" />
 		<BaseBadge variant="pending" text="Pending" />
 		<BaseBadge variant="success">Good condition</BaseBadge>
+
+		<BaseTabSwitcher v-model="activeTab" :tabs="tabs" />
 	</div>
 </template>
 

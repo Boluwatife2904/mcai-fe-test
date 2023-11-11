@@ -1,7 +1,6 @@
 <script setup lang="ts">
 interface Props {
 	variant: "success" | "pending" | "failed";
-	size: number;
 	rounded?: boolean;
 }
 
