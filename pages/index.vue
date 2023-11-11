@@ -14,6 +14,11 @@ const activeGroup = ref("claim");
 <template>
 	<div>
 		<BaseButtonGroup v-model="activeGroup" :group="buttonGroup" />
+
+		<BaseBadge variant="success" text="Successful" />
+		<BaseBadge variant="failed" text="Failed" />
+		<BaseBadge variant="pending" text="Pending" />
+		<BaseBadge variant="success">Good condition</BaseBadge>
 	</div>
 </template>
 
