@@ -1,6 +1,6 @@
 <script setup lang="ts">
 interface Props {
-	variant: "success" | "pending" | "failed";
+	variant: Variants;
 	rounded?: boolean;
 }
 
@@ -23,6 +23,14 @@ const { rounded = true } = defineProps<Props>();
 
 	&--failed {
 		@apply bg-[#B42318];
+	}
+
+	&--yellow {
+		@apply bg-[#F5B203];
+	}
+
+	&--purple {
+		@apply bg-[#7A5AF8];
 	}
 }
 </style>

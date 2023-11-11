@@ -15,6 +15,12 @@ const tabs = [
 <template>
 	<div class="analytics-page pb-[41.7rem]">
 		<BaseTabSwitcher v-model="currentTab" :tabs="tabs" />
+		<div class="analytics-page__overview mb-[3.2rem] flex bg-white">
+			<div class="no-scrollbar flex w-full items-start justify-between gap-[6.4rem] overflow-y-scroll px-[2.1rem] pb-[2.4rem] pt-[4.3rem]">
+				<DashboardAnalyticsOverviewGroup />
+				<DashboardAnalyticsFeaturedGroup />
+			</div>
+		</div>
 		<div class="analytics-page__grid">
 			<div class="mb-[3rem]">
 				<div class="analytics-page__policies-statistics mb-[3.2rem]">
@@ -40,8 +46,7 @@ const tabs = [
 .analytics-page {
 	&__grid {
 		@include breakpoint(xl) {
-			@apply grid;
-			gap: 3rem;
+			@apply grid gap-[3rem];
 			grid-template-columns: 68% 29.1%;
 		}
 	}

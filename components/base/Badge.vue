@@ -1,6 +1,6 @@
 <script setup lang="ts">
 interface Props {
-	variant: "success" | "pending" | "failed";
+	variant: Variants;
 	text?: string;
 }
 
