@@ -15,7 +15,7 @@ const { tableData = [] } = defineProps<TableProps>();
 
 <template>
 	<div class="table">
-		<div class="table__body no-scrollbar overflow-x-scroll">
+		<div class="table__body overflow-x-auto no-scrollbar">
 			<table>
 				<thead>
 					<tr>
@@ -50,6 +50,7 @@ const { tableData = [] } = defineProps<TableProps>();
 	}
 
 	&__row {
+		@apply bg-white;
 		box-shadow: 0px -1px 0px 0px #eaecf0 inset;
 	}
 

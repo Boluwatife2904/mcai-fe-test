@@ -35,7 +35,7 @@ const tableData = [
 </script>
 
 <template>
-	<div>
+	<div class="bg-gray-200 px-16">
 		<BaseButtonGroup v-model="activeGroup" :group="buttonGroup" />
 
 		<BaseBadge variant="success" text="Successful" />
@@ -44,6 +44,8 @@ const tableData = [
 		<BaseBadge variant="success">Good condition</BaseBadge>
 
 		<BaseTabSwitcher v-model="activeTab" :tabs="tabs" />
+
+		<DashboardAnalyticsPoliciesStatistics />
 
 		<DashboardLatestActivityList />
 
