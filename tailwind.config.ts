@@ -6,6 +6,8 @@ export default <Partial<Config>>{
 		extend: {
 			colors: {
 				dark: "#141518",
+				"error": "#FA483C",
+				gray: "#A9A5AF",
 				"gray-25": "#FAFBFD",
 				"gray-60": "#3C4254",
 				"gray-200": "#EAECF0",

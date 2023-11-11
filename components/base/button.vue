@@ -3,7 +3,7 @@ interface ButtonProps {
 	variant?: "primary" | "outline-black";
 }
 
-const { variant = "primary" } = defineProps<ButtonProps>();
+const { variant = "" } = defineProps<ButtonProps>();
 
 const buttonClasses = computed(() => {
 	return ["variant"].map((property) => {
