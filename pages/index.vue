@@ -45,6 +45,8 @@ const tableData = [
 
 		<BaseTabSwitcher v-model="activeTab" :tabs="tabs" />
 
+		<DashboardAnalyticsDistributorSignUp />
+
 		<DashboardAnalyticsPoliciesStatistics />
 
 		<DashboardLatestActivityList />

@@ -5,6 +5,7 @@ export default <Partial<Config>>{
 	theme: {
 		extend: {
 			colors: {
+				"black-100": "#040415",
 				dark: "#141518",
 				error: "#FA483C",
 				gray: "#A9A5AF",
@@ -20,6 +21,7 @@ export default <Partial<Config>>{
 				"gray-900": "#101828",
 				grey: "#E5E6ED",
 				mcai: "#3BAA90",
+				"purple-25": "#FAFAFF",
 				"purple-500": "#7A5AF8",
 				"secondary-mcai": "#070707",
 				"success-500": "#12B76A",

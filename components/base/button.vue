@@ -1,6 +1,6 @@
 <script setup lang="ts">
 interface ButtonProps {
-	variant?: "primary" | "outline-black";
+	variant?: "primary" | "outline-light";
 }
 
 const { variant = "" } = defineProps<ButtonProps>();
@@ -23,6 +23,11 @@ const buttonClasses = computed(() => {
 .button {
 	&--primary {
 		@apply bg-[#3BAA90] text-white;
+	}
+
+	&--outline-light {
+		@apply text-gray-60;
+		border: 1px solid rgba(5, 5, 20, 0.08);
 	}
 }
 </style>
