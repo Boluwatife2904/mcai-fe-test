@@ -4,6 +4,12 @@ export default defineNuxtConfig({
 	css: ["@/assets/styles/fonts.scss", "@/assets/styles/index.scss"],
 	modules: ["@nuxtjs/tailwindcss", "nuxt-icons"],
 	vite: {
+		vue: {
+			script: {
+				defineModel: true,
+				propsDestructure: true,
+			},
+		},
 		css: {
 			preprocessorOptions: {
 				scss: {
