@@ -11,7 +11,11 @@ defineProps<Props>();
 	<span class="base-badge inline-flex items-center gap-[0.8rem]" :class="[`base-badge--${variant}`]">
 		<BaseDot :variant="variant" class="h-[6px] w-[6px]" />
 		<span v-if="text">{{ text }}</span>
-		<slot v-else />
+		<slot>
+			<template v-if="variant === 'success'">Successful</template>
+			<template v-if="variant === 'failed'">Failed</template>
+			<template v-if="variant === 'pending'">Pending</template>
+		</slot>
 	</span>
 </template>
 
