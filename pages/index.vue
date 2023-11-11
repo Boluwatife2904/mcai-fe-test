@@ -49,7 +49,7 @@ const tableData = [
 
 		<DashboardAnalyticsPoliciesStatistics />
 
-		<DashboardLatestActivityList />
+		<DashboardAnalyticsLatestActivityList />
 
 		<BaseTable :columns="tableColumn" :table-data="tableData">
 			<template #type="{ value }">

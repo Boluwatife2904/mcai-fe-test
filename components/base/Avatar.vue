@@ -32,7 +32,7 @@ const backgroundColor = computed(() => {
 
 <style lang="scss" scoped>
 .base-avatar {
-	@apply inline-flex items-center justify-center rounded-full uppercase text-white;
+	@apply inline-flex items-center justify-center rounded-full uppercase text-white text-[1.2rem] font-semibold leading-[2.4rem];
 	background-color: v-bind(backgroundColor);
 
 	&--sm {

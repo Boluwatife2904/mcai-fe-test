@@ -13,9 +13,37 @@ const tabs = [
 </script>
 
 <template>
-	<div class="analytics-page">
+	<div class="analytics-page pb-[41.7rem]">
 		<BaseTabSwitcher v-model="currentTab" :tabs="tabs" />
+		<div class="analytics-page__grid">
+			<div class="mb-[3rem]">
+				<div class="analytics-page__policies-statistics mb-[3.2rem]">
+					<DashboardAnalyticsPoliciesStatistics />
+				</div>
+				<div class="analytics-page__sales">
+					<DashboardAnalyticsRecentSales />
+				</div>
+			</div>
+			<div>
+				<div class="analytics-page__activities mb-[1.8rem]">
+					<DashboardAnalyticsLatestActivityList />
+				</div>
+				<div class="analytics-page__signups">
+					<DashboardAnalyticsDistributorSignUp />
+				</div>
+			</div>
+		</div>
 	</div>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.analytics-page {
+	&__grid {
+		@include breakpoint(xl) {
+			@apply grid;
+			gap: 3rem;
+			grid-template-columns: 68% 29.1%;
+		}
+	}
+}
+</style>

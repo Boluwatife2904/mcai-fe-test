@@ -25,7 +25,7 @@ defineProps<Props>();
 			<NuxtIcon name="chevron-right" filled />
 		</div>
 		<div class="flex items-center justify-between text-[1.2rem] leading-[2rem]">
-			<p class="text-gray-500">{{ activity.agent }} conducted inspection</p>
+			<p class="text-gray-400">{{ activity.agent }} conducted inspection</p>
 			<p class="text-success-500">{{ activity.timestamp }}</p>
 		</div>
 	</div>

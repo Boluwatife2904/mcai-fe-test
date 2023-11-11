@@ -14,14 +14,14 @@ const latestActivities = [
 </script>
 
 <template>
-	<section class="latest-activities flex flex-col gap-[0.4rem] pb-[9.7rem]">
+	<section class="latest-activities flex flex-col gap-[0.4rem] rounded-[1.2rem] overflow-hidden">
 		<p class="text-[1.4rem] leading-[2.4rem] text-gray-500">Latest activities</p>
-		<div class="latest-activities__content bg-white">
+		<div class="latest-activities__content bg-white min-h-[35.9rem]">
 			<div class="latest-activities__group p-[1.2rem] pb-[1.7rem]">
 				<BaseButtonGroup v-model="currentSelection" :group="buttonGroup" />
 			</div>
 			<div class="latest-activities__list">
-				<DashboardLatestActivityListItem v-for="activity in latestActivities" :key="activity.id" :activity="activity" />
+				<DashboardAnalyticsLatestActivityListItem v-for="activity in latestActivities" :key="activity.id" :activity="activity" />
 			</div>
 		</div>
 	</section>

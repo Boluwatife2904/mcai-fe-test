@@ -14,32 +14,30 @@ const { tableData = [] } = defineProps<TableProps>();
 </script>
 
 <template>
-	<div class="table">
-		<div class="table__body overflow-x-auto no-scrollbar">
-			<table>
-				<thead>
-					<tr>
-						<th v-for="column in columns" :key="column.value" class="table__column" :style="{ width: `${column.width}`, minWidth: `${column.width}` }">
-							<span class="table__column-header">{{ column.label }}</span>
-						</th>
+	<div class="table__body no-scrollbar overflow-x-auto">
+		<table>
+			<thead>
+				<tr>
+					<th v-for="column in columns" :key="column.value" class="table__column" :style="{ width: `${column.width}`, minWidth: `${column.width}` }">
+						<span class="table__column-header">{{ column.label }}</span>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<template v-if="!tableData.length">
+					<tr><td class="table__cell table__empty" :colspan="columns.length">No data available</td></tr>
+				</template>
+				<template v-else>
+					<tr v-for="row in tableData" :key="row.id" class="table__row">
+						<td v-for="column in columns" :key="column.value" class="table__cell">
+							<slot :key="column.value" :name="column.value" :value="row[column.value]" :record="row">
+								{{ row[column.value] }}
+							</slot>
+						</td>
 					</tr>
-				</thead>
-				<tbody>
-					<template v-if="!tableData.length">
-						<tr><td class="table__cell table__empty" :colspan="columns.length">No data available</td></tr>
-					</template>
-					<template v-else>
-						<tr v-for="row in tableData" :key="row.id" class="table__row">
-							<td v-for="column in columns" :key="column.value" class="table__cell">
-								<slot :key="column.value" :name="column.value" :value="row[column.value]" :record="row">
-									{{ row[column.value] }}
-								</slot>
-							</td>
-						</tr>
-					</template>
-				</tbody>
-			</table>
-		</div>
+				</template>
+			</tbody>
+		</table>
 	</div>
 </template>
 
