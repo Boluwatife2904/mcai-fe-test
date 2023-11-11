@@ -21,6 +21,7 @@ export default <Partial<Config>>{
 				"purple-500": "#7A5AF8",
 				"secondary-mcai": "#070707",
 				"success-500": "#12B76A",
+				"text-1": "#323B4B",
 			},
 		},
 	},

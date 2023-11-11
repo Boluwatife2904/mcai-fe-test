@@ -28,3 +28,12 @@ svg {
 		margin-bottom: 0 !important;
 	}
 }
+
+.no-scrollbar {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}

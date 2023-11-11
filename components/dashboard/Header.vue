@@ -1,0 +1,25 @@
+<script setup lang="ts">
+interface Emits {
+	(event: "toggle-sidebar"): void;
+}
+
+defineEmits<Emits>();
+</script>
+
+<template>
+	<header class="dashboard__header">
+		<div class="flex items-center gap-5">
+			<button class="flex flex-col gap-2 md:hidden" @click="$emit('toggle-sidebar')">
+				<span v-for="line in 3" :key="line" class="block h-[0.2rem] w-[2.4rem] rounded-lg bg-secondary-mcai"></span>
+			</button>
+			<h4 class="text-text-1 text-[2.4rem] font-semibold leading-[2.3rem]">Analytics</h4>
+		</div>
+		<div></div>
+	</header>
+</template>
+
+<style lang="scss" scoped>
+.dashboard__header {
+	@apply sticky left-0 top-0 bg-white pb-[2.3rem] pl-[2rem] pr-[2rem] pt-[3.3rem] sm:pl-[3.2rem] lg:pl-[6.8rem] lg:pr-[4.8rem];
+}
+</style>
