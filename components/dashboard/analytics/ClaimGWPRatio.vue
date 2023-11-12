@@ -31,7 +31,7 @@ const openRatioModal = (value: boolean) => (showRatioModal.value = value);
 		<div class="flex flex-col gap-[1.2rem]">
 			<h5 class="text-[1.4rem] font-medium leading-[2.8rem] text-gray-600">Last 3 months</h5>
 			<div class="pl-[0.6rem]">
-				<div class="relative z-10 flex flex-col gap-[1.2rem] overflow-hidden">
+				<div class="relative flex flex-col gap-[1.2rem] overflow-hidden">
 					<div v-for="ratio in ratios" :key="ratio.id">
 						<p class="mb-[1px] text-[1rem] font-medium text-gray-500">{{ ratio.month }}</p>
 						<h6 class="text-[1.4rem] font-medium leading-[2.4rem] text-[#44444F]">{{ ratio.percentage }}%</h6>

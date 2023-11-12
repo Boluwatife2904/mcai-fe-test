@@ -21,5 +21,6 @@ defineEmits<Emits>();
 <style lang="scss" scoped>
 .dashboard__header {
 	@apply sticky left-0 top-0 bg-white pb-[2.3rem] pl-[2rem] pr-[2rem] pt-[3.3rem] sm:pl-[3.2rem] lg:pl-[6.8rem] lg:pr-[4.8rem];
+	z-index: 2;
 }
 </style>
