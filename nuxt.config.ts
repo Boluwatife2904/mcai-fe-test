@@ -18,6 +18,9 @@ export default defineNuxtConfig({
 			],
 		},
 	},
+	build: {
+		transpile: ["chart.js"],
+	},
 	devtools: { enabled: true },
 	css: ["@/assets/styles/fonts.scss", "@/assets/styles/index.scss"],
 	modules: ["@nuxtjs/tailwindcss", "nuxt-icons", "@pinia/nuxt", "@pinia-plugin-persistedstate/nuxt"],

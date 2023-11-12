@@ -1,7 +1,7 @@
 <script setup lang="ts">
 definePageMeta({
 	layout: "dashboard",
-	middleware: "auth"
+	middleware: "auth",
 });
 
 const currentTab = ref("transactions");
@@ -33,6 +33,9 @@ const filterOptions = [
 		</div>
 		<div class="analytics-page__grid">
 			<div class="mb-[3rem]">
+				<div class="analytics-page__statistics mb-[2.3rem]">
+					<DashboardAnalyticsStatistics />
+				</div>
 				<div class="analytics-page__policies-statistics mb-[3.2rem]">
 					<DashboardAnalyticsPoliciesStatistics />
 				</div>

@@ -36,7 +36,9 @@
 		"@pinia/nuxt": "^0.5.1",
 		"@vuelidate/core": "^2.0.3",
 		"@vuelidate/validators": "^2.0.4",
+		"chart.js": "^4.4.0",
 		"pinia": "^2.1.7",
+		"vue-chart-3": "^3.1.8",
 		"vue3-radial-progress": "^1.1.1"
 	}
 }
