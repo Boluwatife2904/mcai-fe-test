@@ -1,14 +1,17 @@
 <script setup lang="ts">
+interface Props {
+	data: ClaimGWPData;
+}
+
 interface Emits {
 	(event: "close-modal"): void;
 }
 
-const totalRevenue = "5.2m";
-const claimPaid = "400k";
+const props = defineProps<Props>();
 
 const claimAndRevenue = ["totalRevenue", "claimPaid"].map((item) => {
-	if (item === "totalRevenue") return { name: "Total Revenue", amount: totalRevenue };
-	else return { name: "Total claim paid", amount: claimPaid };
+	if (item === "totalRevenue") return { name: "Total Revenue", amount: convertToInternationalCurrencySystem(props.data.totalRevenue) };
+	else return { name: "Total claim paid", amount: convertToInternationalCurrencySystem(props.data.totalClaimPaid) };
 });
 
 defineEmits<Emits>();
@@ -30,10 +33,10 @@ defineEmits<Emits>();
 			<div class="claim-ratio__modal-body flex flex-col gap-[2.4rem] bg-white">
 				<div class="claim-ratio__claims flex flex-col gap-[2.8rem] rounded-[0.6rem] border border-gray-200">
 					<div class="claim-ratio__claims--top border-b pb-[3.1rem]">
-						<DashboardAnalyticsClaimRevenuePercentage :claim="30" :revenue="60" />
+						<DashboardAnalyticsClaimRevenuePercentage :claim="data.claim" :revenue="data.revenue" />
 					</div>
 					<div class="flex flex-wrap justify-between gap-[2rem]">
-						<DashboardAnalyticsClaimGWPRatioRecord label="% of Claim paid to Revenue" :value="30" :is-percentage="true" />
+						<DashboardAnalyticsClaimGWPRatioRecord label="% of Claim paid to Revenue" :value="data.claimToRevenuePercentage" :is-percentage="true" />
 						<div class="flex gap-[4.2rem]">
 							<DashboardAnalyticsClaimGWPRatioRecord v-for="item in claimAndRevenue" :key="item.name" :label="item.name" :value="item.amount" :is-amount="true" />
 						</div>

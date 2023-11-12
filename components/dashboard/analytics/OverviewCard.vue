@@ -1,7 +1,7 @@
 <script setup lang="ts">
 interface Props {
 	label: string;
-	value: string;
+	value: number;
 	variant: Variants;
 }
 

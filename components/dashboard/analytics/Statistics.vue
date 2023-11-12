@@ -2,6 +2,12 @@
 import { BarChart } from "vue-chart-3";
 import { Chart, BarController, BarElement, LinearScale, CategoryScale, Tooltip, type ChartOptions, type ChartData } from "chart.js";
 Chart.register(BarController, BarElement, LinearScale, CategoryScale, Tooltip);
+
+interface Props {
+	isLoading: boolean;
+}
+defineProps<Props>();
+
 const labels = ["sales", "claim"];
 
 const testData: ChartData<"bar"> = {
@@ -63,11 +69,17 @@ const chartOptions: ChartOptions = {
 <template>
 	<div class="statistics flex flex-col gap-[5.3rem] rounded-[1.2rem] bg-white">
 		<div class="flex flex-wrap items-center sm:gap-10">
-			<div class="md:border-r md:border-r-[#D6DDE0] md:pr-[4.4rem]">
-				<h3 class="font-medium leading-[3.4rem] text-gray-800">Total No. of Sales Vs Total Claim</h3>
-				<p class="text-[1.4rem] leading-[2.4rem] text-mcai">Last Year</p>
+			<div class="md:pr-[4.4rem]" :class="{ 'md:border-r md:border-r-[#D6DDE0]': !isLoading }">
+				<template v-if="isLoading">
+					<LoadingShimmer class="mb-3 h-[2.4rem] w-[21.9rem] rounded-[0.4rem]" />
+					<LoadingShimmer class="h-[1.6rem] w-[5.3rem] rounded-[0.4rem]" />
+				</template>
+				<template v-else>
+					<h3 class="font-medium leading-[3.4rem] text-gray-800">Total No. of Sales Vs Total Claim</h3>
+					<p class="text-[1.4rem] leading-[2.4rem] text-mcai">Last Year</p>
+				</template>
 			</div>
-			<div class="sm:pl-3rem mx-auto md:mx-0 flex items-center justify-center gap-5 md:flex-col md:items-start md:justify-start md:pl-[7.7rem]">
+			<div v-if="!isLoading" class="sm:pl-3rem mx-auto flex items-center justify-center gap-5 md:mx-0 md:flex-col md:items-start md:justify-start md:pl-[7.7rem]">
 				<span v-for="label in labels" :key="label" class="flex items-center justify-end gap-[1rem] text-[1.2rem] capitalize leading-[2.8rem] text-[#7F91A8]">
 					<BaseDot :variant="label === 'sales' ? 'purple' : 'yellow'" class="h-[1rem] w-[1rem]" />
 					{{ label }}
@@ -75,7 +87,8 @@ const chartOptions: ChartOptions = {
 			</div>
 		</div>
 		<div class="relative h-[20.3rem]">
-			<BarChart css-classes="h-full" :chart-data="testData" :options="chartOptions" />
+			<LoadingShimmer v-if="isLoading" class="h-full w-full" />
+			<BarChart v-else css-classes="h-full" :chart-data="testData" :options="chartOptions" />
 		</div>
 	</div>
 </template>

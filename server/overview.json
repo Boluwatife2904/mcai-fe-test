@@ -1,0 +1,51 @@
+{
+	"overview": {
+		"numberOfDistributors": 600,
+		"activeDistributor": 570,
+		"numberOfPolicySold": 1200
+	},
+	"featured": {
+		"gwp": 20200000,
+		"gwpIncrease": 1.5,
+		"revenue": 12000000,
+		"revenueIncrease": 2.5,
+		"totalClaimPaid": 3100000
+	},
+	"claimGWPRatio": {
+		"percentageClaim": 70,
+		"data": [
+			{ "id": "1", "month": "January", "value": 30 },
+			{ "id": "2", "month": "February", "value": 40 },
+			{ "id": "3", "month": "March", "value": 20 }
+		],
+		"totalClaimPaid": 400000,
+		"totalRevenue": 5200000,
+		"claimToRevenuePercentage": 30,
+		"claim": 30,
+		"revenue": 60
+	},
+	"distributors": [
+		{ "id": "1", "name": "Mycovergenius", "timestamp": "5 mins ago" },
+		{ "id": "2", "name": "Cowrywise", "timestamp": "42 mins ago" },
+		{ "id": "3", "name": "Fincra", "timestamp": "1 hour ago" },
+		{ "id": "4", "name": "Kuda", "timestamp": "1 hour ago" }
+	],
+	"latestActivities": [
+		{ "id": "1", "activity": "preloss-conducted", "agent": "Agent Ade", "timestamp": "Just Now" },
+		{ "id": "2", "activity": "claim-submitted", "agent": "Agent Ade", "timestamp": "Just Now" },
+		{ "id": "3", "activity": "preloss-conducted", "agent": "Agent Ade", "timestamp": "Just Now" }
+	],
+	"policiesStatistics": {
+		"totalPolicies": 500,
+		"totalActivePolicies": 200,
+		"totalInactivePolicies": 200,
+		"averagePolicyValue": 50000,
+		"percentageOfPolicyRenewal": 60
+	},
+	"recentSales": [
+		{ "id": "1", "type": "Purchase", "policy": "Flexicare", "customer": "Alex Igwe", "distributor": "Mycovergenius", "date": "July 12 2022", "status": "success" },
+		{ "id": "2", "type": "Renewal", "policy": "Compre.Auto", "customer": "Ajayi Ibrahim", "distributor": "Cowrywise", "date": "July 12 2022", "status": "success" },
+		{ "id": "3", "type": "Purchase", "policy": "Travel", "customer": "Ade Debo", "distributor": "Fincra", "date": "July 12 2022", "status": "failed" },
+		{ "id": "4", "type": "Renewal", "policy": "Gadget", "customer": "Chuks Olivia", "distributor": "MCG", "date": "July 12 2022", "status": "pending" }
+	]
+}
