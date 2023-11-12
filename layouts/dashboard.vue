@@ -22,7 +22,7 @@ watch(
 
 <template>
 	<div class="dashboard grid">
-		<aside class="dashboard__sidebar h-screen" :class="{ 'dashboard__sidebar--active': sidebarIsOpen }">
+		<aside class="dashboard__sidebar h-screen z-10 relative" :class="{ 'dashboard__sidebar--active': sidebarIsOpen }">
 			<DashboardSidebar />
 		</aside>
 		<div class="dashboard__content h-screen overflow-y-scroll">
@@ -45,7 +45,7 @@ watch(
 
 	&__sidebar {
 		@apply fixed left-[-100%] top-0 bg-secondary-mcai transition-all duration-200 ease-linear md:static;
-		z-index: 1;
+		z-index: 3;
 
 		&--active {
 			@apply left-0 w-full min-w-[25rem] max-w-[25rem];
@@ -59,6 +59,7 @@ watch(
 
 	&__overlay {
 		background-color: rgba(0, 0, 0, 0.15);
+		z-index: 2;
 	}
 }
 </style>
