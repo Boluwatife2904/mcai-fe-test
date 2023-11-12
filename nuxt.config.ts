@@ -6,9 +6,9 @@ export default defineNuxtConfig({
 				lang: "en",
 			},
 			title: "MyCoverAI Test",
+			viewport: "width=device-width, initial-scale=1",
 			meta: [
 				{ name: "theme-color", content: "#040415" },
-				{ name: "viewport", content: "width=device-width, initial-scale=1" },
 				{ name: "description", content: "Repository for the implementation of the task given for the frontend developer role at MyCoverAi " },
 				{ name: "og:title", content: "MyCoverAI Test" },
 				{ name: "og:site_name", content: "MyCoverAI Test" },
