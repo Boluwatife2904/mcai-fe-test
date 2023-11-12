@@ -34,6 +34,9 @@ const tabs = [
 				<div class="analytics-page__activities mb-[1.8rem]">
 					<DashboardAnalyticsLatestActivityList />
 				</div>
+				<div class="analytics-page__claim-ratio mb-[1rem]">
+					<DashboardAnalyticsClaimGWPRatio />
+				</div>
 				<div class="analytics-page__signups">
 					<DashboardAnalyticsDistributorSignUp />
 				</div>

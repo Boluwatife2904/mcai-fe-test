@@ -1,24 +1,17 @@
 <script setup lang="ts">
 interface Props {
-	initials: string;
+	name: string;
 	size: "sm" | "md" | "lg";
 }
 
 const props = defineProps<Props>();
 
-const colors = ["#F58634", "#246CF9", "#3BAA90"];
+const colors = ["#3BAA90", "#246CF9", "#F58634", "#F58634", "#F58634"];
 
-function stringToHashCode(str: string) {
-	let hash = 0;
-	for (let i = 0; i < str.length; i++) {
-		const char = str.charCodeAt(i);
-		hash = (hash << 5) - hash + char;
-	}
-	return hash;
-}
+const initials = computed(() => convertWordToInitials(props.name));
 
 const backgroundColor = computed(() => {
-	const hashCode = stringToHashCode(props.initials);
+	const hashCode = stringToHashCode(initials.value);
 	const nonNegativeIndex = Math.abs(hashCode % colors.length);
 	return colors[nonNegativeIndex];
 });
@@ -32,7 +25,7 @@ const backgroundColor = computed(() => {
 
 <style lang="scss" scoped>
 .base-avatar {
-	@apply inline-flex items-center justify-center rounded-full uppercase text-white text-[1.2rem] font-semibold leading-[2.4rem];
+	@apply inline-flex items-center justify-center rounded-full text-[1.2rem] font-semibold uppercase leading-[2.4rem] text-white;
 	background-color: v-bind(backgroundColor);
 
 	&--sm {

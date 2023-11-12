@@ -1,7 +1,6 @@
 <script setup lang="ts">
 interface Props {
 	distributor: {
-		initials: string;
 		name: string;
 		timestamp: string;
 	};
@@ -13,7 +12,7 @@ defineProps<Props>();
 <template>
 	<div class="flex items-center justify-between">
 		<div class="flex items-center gap-[1.58rem]">
-			<BaseAvatar size="lg" :initials="distributor.initials" />
+			<BaseAvatar size="lg" :name="distributor.name" />
 			<div class="flex flex-col gap-[0.4rem] text-[1.4rem] leading-[2.4rem]">
 				<h6 class="text-black-100 font-medium">{{ distributor.name }}</h6>
 				<p class="text-gray-400">{{ distributor.timestamp }}</p>
