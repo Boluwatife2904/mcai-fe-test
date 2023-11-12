@@ -4,6 +4,7 @@ import { required, email, helpers, minLength } from "@vuelidate/validators";
 
 definePageMeta({
 	layout: "auth",
+	middleware: "guest",
 });
 
 const { loginWithEmailPassword } = useAuth();
