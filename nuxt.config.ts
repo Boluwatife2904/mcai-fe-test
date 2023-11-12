@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
 	devtools: { enabled: true },
 	css: ["@/assets/styles/fonts.scss", "@/assets/styles/index.scss"],
-	modules: ["@nuxtjs/tailwindcss", "nuxt-icons"],
+	modules: ["@nuxtjs/tailwindcss", "nuxt-icons", "@pinia/nuxt", "@pinia-plugin-persistedstate/nuxt"],
 	vite: {
 		vue: {
 			script: {

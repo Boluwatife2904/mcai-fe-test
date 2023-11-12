@@ -1,3 +1,5 @@
+import type { ErrorObject } from "@vuelidate/core";
+
 export function convertWordToInitials(word: string) {
 	let position;
 	let length;
@@ -23,4 +25,8 @@ export function stringToHashCode(word: string) {
 		hash = (hash << 5) - hash + char;
 	}
 	return hash;
+}
+
+export function formatVuelidateMessage(errors: ErrorObject[]) {
+	return errors.length ? (errors[0].$message as string) : "";
 }

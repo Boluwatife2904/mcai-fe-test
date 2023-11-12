@@ -1,6 +1,7 @@
 <script setup lang="ts">
 interface ButtonProps {
 	variant?: "primary" | "outline-light";
+	isLoading?: boolean;
 }
 
 const { variant = "" } = defineProps<ButtonProps>();
@@ -14,8 +15,9 @@ const buttonClasses = computed(() => {
 </script>
 
 <template>
-	<button class="flex items-center" :class="buttonClasses">
-		<slot />
+	<button class="button flex items-center" :class="buttonClasses" v-bind="$attrs">
+		<NuxtIcon v-if="isLoading" name="spinner" class="animate-spin" filled /> 
+		<slot v-else />
 	</button>
 </template>
 
@@ -28,6 +30,10 @@ const buttonClasses = computed(() => {
 	&--outline-light {
 		@apply text-gray-60;
 		border: 1px solid rgba(5, 5, 20, 0.08);
+	}
+
+	&:disabled {
+		@apply opacity-50;
 	}
 }
 </style>
