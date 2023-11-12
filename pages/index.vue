@@ -43,6 +43,7 @@ const tableData = [
 		<BaseBadge variant="pending" text="Pending" />
 		<BaseBadge variant="success">Good condition</BaseBadge>
 
+
 		<BaseTabSwitcher v-model="activeTab" :tabs="tabs" />
 
 		<DashboardAnalyticsDistributorSignUp />
