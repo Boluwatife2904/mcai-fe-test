@@ -1,11 +1,15 @@
 <script setup lang="ts">
 import RadialProgress from "vue3-radial-progress";
 
+const showRatioModal = ref(false);
+
 const ratios = [
 	{ id: "1", month: "January", percentage: 30 },
 	{ id: "2", month: "February", percentage: 40 },
 	{ id: "3", month: "March", percentage: 20 },
 ];
+
+const openRatioModal = (value: boolean) => (showRatioModal.value = value);
 </script>
 
 <template>
@@ -34,15 +38,33 @@ const ratios = [
 					</div>
 					<span class="ratios-bg pointer-events-none absolute left-[-1.5rem] top-[5.7rem] block h-[13.2rem] w-[6.6rem]"></span>
 				</div>
-				<BaseButton class="weight-500 text-[1.2rem] leading-[2.8rem] text-mcai">View more</BaseButton>
+				<BaseButton class="weight-500 text-[1.2rem] leading-[2.8rem] text-mcai" @click="openRatioModal(true)">View more</BaseButton>
 			</div>
 		</div>
+
+		<ModalsClaimRatioGWP v-if="showRatioModal" @close-modal="openRatioModal(false)" />
 	</div>
 </template>
 
 <style lang="scss" scoped>
 .claim-ratio {
 	@apply rounded-[1.2rem] pb-[0.3rem] pl-[1.7rem] pr-[2.1rem] pt-[1.6rem];
+
+	&__modal-header {
+		@apply pb-[1.9rem] pl-[2rem] pr-[2rem] pt-[2.2rem] sm:pl-[3.2rem] md:pr-[4rem] lg:pl-[5.4rem];
+	}
+
+	&__modal-body {
+		@apply px-[2rem] pb-[3.6rem] pt-[5.4rem] sm:px-[3.2rem] lg:px-[5.4rem];
+	}
+
+	&__claims {
+		@apply pb-[2.6rem] pl-[1.2rem] pr-[1.2rem] pt-[2rem] md:pl-[2.9rem] md:pr-[3.1rem];
+
+		&--top {
+			border-bottom: 0.4px solid #d0d5dd;
+		}
+	}
 }
 
 .ratios-bg {

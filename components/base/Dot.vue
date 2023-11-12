@@ -17,6 +17,10 @@ const { rounded = true } = defineProps<Props>();
 		@apply bg-[#027A48];
 	}
 
+	&--success-500 {
+		@apply bg-[#12B76A];
+	}
+
 	&--pending {
 		@apply bg-[#B54708];
 	}
@@ -31,6 +35,10 @@ const { rounded = true } = defineProps<Props>();
 
 	&--purple {
 		@apply bg-[#7A5AF8];
+	}
+
+	&--error-500 {
+		@apply bg-[#F04438];
 	}
 }
 </style>

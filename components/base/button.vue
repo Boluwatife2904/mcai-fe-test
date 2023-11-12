@@ -14,7 +14,7 @@ const buttonClasses = computed(() => {
 </script>
 
 <template>
-	<button class="inline-flex items-center" :class="buttonClasses">
+	<button class="flex items-center" :class="buttonClasses">
 		<slot />
 	</button>
 </template>

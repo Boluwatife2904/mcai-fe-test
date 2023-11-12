@@ -7,3 +7,22 @@
 .fade-leave-to {
 	opacity: 0;
 }
+
+.slidein-enter-active,
+.slidein-leave-active {
+	transition: all 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.slidein-enter,
+.slidein-leave-from {
+	opacity: 1;
+	transform: translateX(0) scale(1);
+	will-change: transform opacity;
+}
+
+.slidein-enter-from,
+.slidein-leave-to {
+	opacity: 0;
+	transform: translateY(4rem) scale(0.95);
+	
+}
