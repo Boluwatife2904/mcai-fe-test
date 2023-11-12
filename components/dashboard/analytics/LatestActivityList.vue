@@ -14,9 +14,9 @@ const latestActivities = [
 </script>
 
 <template>
-	<section class="latest-activities flex flex-col gap-[0.4rem] rounded-[1.2rem] overflow-hidden">
+	<section class="latest-activities flex flex-col gap-[0.4rem] overflow-hidden rounded-[1.2rem]">
 		<p class="text-[1.4rem] leading-[2.4rem] text-gray-500">Latest activities</p>
-		<div class="latest-activities__content bg-white min-h-[35.9rem]">
+		<div class="latest-activities__content min-h-[35.9rem] bg-white">
 			<div class="latest-activities__group p-[1.2rem] pb-[1.7rem]">
 				<BaseButtonGroup v-model="currentSelection" :group="buttonGroup" />
 			</div>

@@ -14,7 +14,7 @@ defineProps<Props>();
 		<div class="flex items-center gap-[1.58rem]">
 			<BaseAvatar size="lg" :name="distributor.name" />
 			<div class="flex flex-col gap-[0.4rem] text-[1.4rem] leading-[2.4rem]">
-				<h6 class="text-black-100 font-medium">{{ distributor.name }}</h6>
+				<h6 class="font-medium text-black-100">{{ distributor.name }}</h6>
 				<p class="text-gray-400">{{ distributor.timestamp }}</p>
 			</div>
 		</div>

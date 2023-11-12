@@ -12,7 +12,7 @@ defineEmits<Emits>();
 			<button class="flex flex-col gap-2 md:hidden" @click="$emit('toggle-sidebar')">
 				<span v-for="line in 3" :key="line" class="block h-[0.2rem] w-[2.4rem] rounded-lg bg-secondary-mcai"></span>
 			</button>
-			<h4 class="text-text-1 text-[2.4rem] font-semibold leading-[2.3rem]">Analytics</h4>
+			<h4 class="text-[2.4rem] font-semibold leading-[2.3rem] text-text-1">Analytics</h4>
 		</div>
 		<div></div>
 	</header>

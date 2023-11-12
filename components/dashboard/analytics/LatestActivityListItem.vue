@@ -13,7 +13,7 @@ defineProps<Props>();
 </script>
 
 <template>
-	<div class="activity py-[0.5rem] pl-[1.6rem] pr-[2.2rem] cursor-pointer">
+	<div class="activity cursor-pointer py-[0.5rem] pl-[1.6rem] pr-[2.2rem]">
 		<div class="flex justify-between">
 			<div class="flex items-center gap-[0.8rem]">
 				<NuxtIcon :name="activity.activity" filled />

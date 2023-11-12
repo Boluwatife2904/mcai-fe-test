@@ -28,7 +28,7 @@ const login = () => {};
 				<BaseInput id="email" v-model="form.email" name="email" type="email" label="Email Address" placeholder="Enter your email address" icon="calendar-today" />
 				<BaseInput id="password" v-model="form.password" name="password" type="password" label="Password" placeholder="Enter your password" icon="lock-outline" />
 			</div>
-			<NuxtLink to="#" class="text-error mb-[1.9rem] ml-auto flex w-fit text-[1.5rem] leading-[2.2rem]">Forgot Password ?</NuxtLink>
+			<NuxtLink to="#" class="mb-[1.9rem] ml-auto flex w-fit text-[1.5rem] leading-[2.2rem] text-error">Forgot Password ?</NuxtLink>
 			<div class="relative">
 				<NuxtIcon name="dots" class="absolute left-[-8.8rem] top-[-2.2rem]" filled />
 				<BaseButton variant="primary" class="min-w-full justify-center gap-[2rem] rounded-[0.5rem] px-[2.4rem] py-[1.8rem] md:min-w-[10.8rem]">

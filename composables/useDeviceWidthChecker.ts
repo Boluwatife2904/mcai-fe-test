@@ -4,7 +4,6 @@ export function useDeviceWidthChecker() {
 	const handleWindowResize = () => {
 		const innerWidth = window.innerWidth;
 		isOnMobile.value = innerWidth < 768;
-		console.log(isOnMobile.value)
 	};
 
 	onMounted(() => {

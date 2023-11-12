@@ -26,7 +26,7 @@ const togglePasswordVisibility = () => {
 
 <template>
 	<div class="base-input relative w-full">
-		<input :id="id" ref="inputRef" v-model="modelValue" :name="name" :type="type" autocomplete="off" class="base-input__element border-gray block w-full border-b-[0.05rem] border-solid transition-colors ease-linear" :class="[{ 'pl-[3.7rem]': !!icon }]" v-bind="$attrs" :placeholder="placeholder" />
+		<input :id="id" ref="inputRef" v-model="modelValue" :name="name" :type="type" autocomplete="off" class="base-input__element block w-full border-b-[0.05rem] border-solid border-gray transition-colors ease-linear" :class="[{ 'pl-[3.7rem]': !!icon }]" v-bind="$attrs" :placeholder="placeholder" />
 		<label :for="id" class="base-input__label absolute block" :placeholder="placeholder">{{ label }}</label>
 		<NuxtIcon v-if="icon" :name="icon" class="absolute left-0 top-[-0.2rem]" filled />
 		<BaseButton type="button" class="absolute right-[1rem] top-[-0.2rem]" @click="togglePasswordVisibility">

@@ -2,7 +2,7 @@
 interface Props {
 	label: string;
 	value: string;
-	variant: Variants
+	variant: Variants;
 }
 
 defineProps<Props>();
@@ -10,7 +10,7 @@ defineProps<Props>();
 
 <template>
 	<div class="overview-card flex min-h-[7rem] flex-col items-center justify-center rounded-[0.8rem] bg-gray-25">
-		<p class="text-[1rem] leading-[160%] text-gray-600 flex items-center gap-[0.5rem]">
+		<p class="flex items-center gap-[0.5rem] text-[1rem] leading-[160%] text-gray-600">
 			<BaseDot :variant="variant" class="h-[0.6rem] w-[0.6rem]" />
 			{{ label }}
 		</p>

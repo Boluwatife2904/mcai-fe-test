@@ -18,7 +18,7 @@ const selectButton = (buttonValue: string) => {
 </script>
 
 <template>
-	<div class="button-group w-fit flex gap-[0.1rem] overflow-hidden">
+	<div class="button-group flex w-fit gap-[0.1rem] overflow-hidden">
 		<button v-for="button in group" :key="button.value" class="button-group__item" :class="{ 'button-group__item--active': modelValue === button.value }" @click="selectButton(button.value)">
 			{{ button.label }}
 		</button>
@@ -31,7 +31,7 @@ const selectButton = (buttonValue: string) => {
 	box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
 
 	&__item {
-		@apply text-gray-700 bg-white px-[1.6rem] py-[1rem] text-[1.2rem] font-medium leading-[2rem] transition-colors ease-linear;
+		@apply bg-white px-[1.6rem] py-[1rem] text-[1.2rem] font-medium leading-[2rem] text-gray-700 transition-colors ease-linear;
 
 		&--active {
 			@apply bg-secondary-mcai text-white;

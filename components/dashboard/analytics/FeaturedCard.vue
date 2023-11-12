@@ -14,7 +14,7 @@ defineProps<Props>();
 		<p class="text-[1.4rem] leading-[2rem] text-white">{{ name }}</p>
 		<div class="flex items-center gap-[2rem]">
 			<p class="text-[2rem] font-semibold leading-[3rem] text-white">N {{ value }}</p>
-			<span class="bg-primary-50 flex min-h-[1.7rem] min-w-[5.9rem] items-center gap-[0.3rem] rounded-[0.2rem] px-[0.3rem] py-[0.2rem] text-success-500">
+			<span class="flex min-h-[1.7rem] min-w-[5.9rem] items-center gap-[0.3rem] rounded-[0.2rem] bg-primary-50 px-[0.3rem] py-[0.2rem] text-success-500">
 				<template v-if="increase">
 					<NuxtIcon name="trending-up" filled />
 					{{ increase }}
