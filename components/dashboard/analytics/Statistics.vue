@@ -28,6 +28,22 @@ const chartOptions: ChartOptions = {
 	plugins: {
 		tooltip: {
 			backgroundColor: "#101828",
+			bodyColor: "#fff",
+			bodyFont: {
+				family: "Phantom Sans",
+				size: 10,
+			},
+			callbacks: {
+				title: () => "Claim:",
+				beforeBody: () => `80 Policies || N`,
+			},
+			displayColors: false,
+			titleColor: "#3BAA90",
+			titleFont: {
+				family: "Phantom Sans",
+				size: 8,
+			},
+			position: "nearest",
 		},
 	},
 	scales: {
