@@ -27,7 +27,7 @@ const selectOption = (option: string) => {
 </script>
 
 <template>
-	<div class="select flex flex-wrap cursor-pointer items-center gap-[1rem]" @click.stop="openDropdown(true)">
+	<div class="select flex cursor-pointer flex-wrap items-center gap-[1rem]" @click.stop="openDropdown(true)">
 		<div class="relative w-fit">
 			<p class="select__selected inline-flex text-[1.4rem] font-semibold text-gray-700">
 				Filters by: {{ selectedOption }}

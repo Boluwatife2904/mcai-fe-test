@@ -12,8 +12,8 @@ const revenuePercentage = computed(() => (props.revenue / (props.claim + props.r
 
 <template>
 	<div class="ratio flex flex-col gap-[1.6rem]">
-		<div class="ratio__percentage bg-success-50 flex text-[0.8rem] font-medium tracking-[1.2rem]">
-			<div class="bg-error-200 text-error-500 rounded-[2.6rem]" :style="{ width: `${claimPercentage}%` }">CLAIM</div>
+		<div class="ratio__percentage flex bg-success-50 text-[0.8rem] font-medium tracking-[1.2rem]">
+			<div class="rounded-[2.6rem] bg-error-200 text-error-500" :style="{ width: `${claimPercentage}%` }">CLAIM</div>
 			<div class="text-success-800" :style="{ width: `${revenuePercentage}%` }">REVENUE</div>
 		</div>
 		<div class="flex items-center justify-between text-[1.4rem] font-semibold text-gray-700">

@@ -16,7 +16,7 @@ const buttonClasses = computed(() => {
 
 <template>
 	<button class="button flex items-center" :class="buttonClasses" v-bind="$attrs">
-		<NuxtIcon v-if="isLoading" name="spinner" class="animate-spin" filled /> 
+		<NuxtIcon v-if="isLoading" name="spinner" class="animate-spin" filled />
 		<slot v-else />
 	</button>
 </template>

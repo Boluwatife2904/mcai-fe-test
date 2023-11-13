@@ -1,6 +1,6 @@
 <script setup lang="ts">
 interface Props {
-	data?: FeaturedData,
+	data?: FeaturedData;
 	isLoading: boolean;
 }
 

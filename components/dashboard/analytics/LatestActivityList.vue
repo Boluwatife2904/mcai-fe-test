@@ -37,7 +37,7 @@ const currentSelection = ref("claim");
 <style lang="scss" scoped>
 .latest-activities {
 	&__list {
-		@apply rounded-[0.4rem] bg-gray-25 overflow-hidden;
+		@apply overflow-hidden rounded-[0.4rem] bg-gray-25;
 		border: 0.6px solid #eaecf0;
 		box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.02);
 	}

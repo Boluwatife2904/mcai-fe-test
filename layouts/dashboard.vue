@@ -22,7 +22,7 @@ watch(
 
 <template>
 	<div class="dashboard grid">
-		<aside class="dashboard__sidebar h-screen z-10 relative" :class="{ 'dashboard__sidebar--active': sidebarIsOpen }">
+		<aside class="dashboard__sidebar relative z-10 h-screen" :class="{ 'dashboard__sidebar--active': sidebarIsOpen }">
 			<DashboardSidebar />
 		</aside>
 		<div class="dashboard__content h-screen overflow-y-scroll">

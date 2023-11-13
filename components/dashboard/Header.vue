@@ -22,7 +22,7 @@ const { user } = useUserStore();
 				<BaseDot class="absolute right-[-0.4rem] top-[-0.6rem] h-[1.2rem] w-[1.2rem]" variant="error-500" />
 			</div>
 			<div class="flex cursor-pointer items-center gap-[1.8rem]">
-				<img src="/images/avatar.png" class="h-[4rem] w-[4rem] object-cover rounded" alt="User avatar" />
+				<img src="/images/avatar.png" class="h-[4rem] w-[4rem] rounded object-cover" alt="User avatar" />
 				<p class="hidden items-center gap-[0.9rem] text-[1.4rem] font-semibold leading-[1.6rem] text-dark sm:flex">
 					Hello {{ user?.name }}
 					<NuxtIcon name="dropdown" filled />
