@@ -1,16 +1,4 @@
 {
-	"overview": {
-		"numberOfDistributors": 600,
-		"activeDistributor": 570,
-		"numberOfPolicySold": 1200
-	},
-	"featured": {
-		"gwp": 20200000,
-		"gwpIncrease": 1.5,
-		"revenue": 12000000,
-		"revenueIncrease": 2.5,
-		"totalClaimPaid": 3100000
-	},
 	"claimGWPRatio": {
 		"percentageClaim": 70,
 		"data": [
@@ -30,11 +18,23 @@
 		{ "id": "3", "name": "Fincra", "timestamp": "1 hour ago" },
 		{ "id": "4", "name": "Kuda", "timestamp": "1 hour ago" }
 	],
+	"featured": {
+		"gwp": 20200000,
+		"gwpIncrease": 1.5,
+		"revenue": 12000000,
+		"revenueIncrease": 2.5,
+		"totalClaimPaid": 3100000
+	},
 	"latestActivities": [
 		{ "id": "1", "activity": "preloss-conducted", "agent": "Agent Ade", "timestamp": "Just Now" },
 		{ "id": "2", "activity": "claim-submitted", "agent": "Agent Ade", "timestamp": "Just Now" },
 		{ "id": "3", "activity": "preloss-conducted", "agent": "Agent Ade", "timestamp": "Just Now" }
 	],
+	"overview": {
+		"numberOfDistributors": 600,
+		"activeDistributor": 570,
+		"numberOfPolicySold": 1200
+	},
 	"policiesStatistics": {
 		"totalPolicies": 500,
 		"totalActivePolicies": 200,
@@ -47,5 +47,7 @@
 		{ "id": "2", "type": "Renewal", "policy": "Compre.Auto", "customer": "Ajayi Ibrahim", "distributor": "Cowrywise", "date": "July 12 2022", "status": "success" },
 		{ "id": "3", "type": "Purchase", "policy": "Travel", "customer": "Ade Debo", "distributor": "Fincra", "date": "July 12 2022", "status": "failed" },
 		{ "id": "4", "type": "Renewal", "policy": "Gadget", "customer": "Chuks Olivia", "distributor": "MCG", "date": "July 12 2022", "status": "pending" }
-	]
+	],
+	"totalClaims": [100000, 120000, 110000, 180000, 200000, 90000, 90000, 50000, 30000, 50000, 90000, 50000],
+	"totalSales": [70000, 150000, 300000, 70000, 100000, 230000, 100000, 220000, 240000, 75000, 210000, 110000]
 }

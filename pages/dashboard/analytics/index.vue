@@ -40,7 +40,7 @@ const filterOptions = [
 		<div class="analytics-page__grid">
 			<div class="mb-[3rem]">
 				<div class="analytics-page__statistics mb-[2.3rem]">
-					<DashboardAnalyticsStatistics :is-loading="pending" />
+					<DashboardAnalyticsStatistics :total-claims="data.totalClaims" :total-sales="data.totalSales" :is-loading="pending" />
 				</div>
 				<div class="analytics-page__policies-statistics mb-[3.2rem]">
 					<DashboardAnalyticsPoliciesStatistics :data="data?.policiesStatistics" :is-loading="pending" />

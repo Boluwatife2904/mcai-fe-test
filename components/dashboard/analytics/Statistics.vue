@@ -4,25 +4,24 @@ import { Chart, BarController, BarElement, LinearScale, CategoryScale, Tooltip, 
 Chart.register(BarController, BarElement, LinearScale, CategoryScale, Tooltip);
 
 interface Props {
+	totalClaims: number[];
+	totalSales: number[];
 	isLoading: boolean;
 }
-defineProps<Props>();
+const props = defineProps<Props>();
 
 const labels = ["sales", "claim"];
+const chartIsLoading = ref(true);
 
-const testData: ChartData<"bar"> = {
-	labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-	datasets: [
-		{
-			data: [70000, 150000, 300000, 70000, 100000, 230000, 100000, 220000, 240000, 75000, 210000, 110000],
-			backgroundColor: "#7A5AF8",
-		},
-		{
-			data: [100000, 120000, 110000, 180000, 200000, 90000, 90000, 50000, 30000, 50000, 90000, 50000],
-			backgroundColor: "#F5B203",
-		},
-	],
-};
+const chartData = computed<ChartData<"bar">>(() => {
+	return {
+		labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+		datasets: [
+			{ data: props.totalSales, backgroundColor: "#7A5AF8" },
+			{ data: props.totalClaims, backgroundColor: "#F5B203" },
+		],
+	};
+});
 
 const chartOptions: ChartOptions = {
 	responsive: true,
@@ -87,8 +86,8 @@ const chartOptions: ChartOptions = {
 			</div>
 		</div>
 		<div class="relative h-[20.3rem]">
-			<LoadingShimmer v-if="isLoading" class="h-full w-full" />
-			<BarChart v-else css-classes="h-full" :chart-data="testData" :options="chartOptions" />
+			<LoadingShimmer v-if="isLoading || chartIsLoading" class="h-full w-full" />
+			<BarChart css-classes="h-full" :chart-data="chartData" :options="chartOptions" @chart-render="chartIsLoading = false" />
 		</div>
 	</div>
 </template>
