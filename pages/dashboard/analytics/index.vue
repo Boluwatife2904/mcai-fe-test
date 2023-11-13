@@ -4,6 +4,10 @@ definePageMeta({
 	middleware: "auth",
 });
 
+useSeoMeta({
+	title: "Dashboard | Analytics | MyCoverAI"
+})
+
 const currentTab = ref("transactions");
 const currentFilter = ref("last-year");
 

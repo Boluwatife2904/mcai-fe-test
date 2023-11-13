@@ -7,6 +7,10 @@ definePageMeta({
 	middleware: "guest",
 });
 
+useSeoMeta({
+	title: "Login | MyCoverAI"
+})
+
 const { loginWithEmailPassword } = useAuth();
 const { setUser } = useUserStore();
 
@@ -27,7 +31,7 @@ const loginUser = async () => {
 		setTimeout(() => {
 			setUser({ email: form.email, name: "John Doe" });
 			navigateTo({ name: "dashboard-analytics" });
-		}, 3000);
+		}, 1000);
 	} catch (error) {
 		//
 	}
