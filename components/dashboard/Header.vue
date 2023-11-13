@@ -22,7 +22,7 @@ const logout = () => {
 			</button>
 			<h4 class="text-[2.4rem] font-semibold leading-[2.3rem] text-text-1">Analytics</h4>
 		</div>
-		<div class="flex items-center gap-[2.4rem]">
+		<div class="flex items-center gap-[2.4rem] relative">
 			<div class="relative">
 				<NuxtIcon name="bell-line" filled />
 				<BaseDot class="absolute right-[-0.4rem] top-[-0.6rem] h-[1.2rem] w-[1.2rem]" variant="error-500" />
@@ -33,13 +33,13 @@ const logout = () => {
 					Hello {{ user?.name }}
 					<NuxtIcon name="dropdown" filled />
 				</p>
-				<BaseDropdown :show="showDropdown" class="top-[4.6rem]" @close="showDropdown = false">
-					<BaseButton class="gap-4 px-[1rem] py-[1.6rem]" @click.stop="logout">
-						<NuxtIcon name="logout" filled />
-						Logout
-					</BaseButton>
-				</BaseDropdown>
 			</div>
+			<BaseDropdown :show="showDropdown" class="top-[4.6rem] min-w-[15rem] max-w-[17rem] right-0" @close="showDropdown = false">
+				<BaseButton class="gap-4 px-[1rem] py-[1.6rem]" @click.stop="logout">
+					<NuxtIcon name="logout" filled />
+					Logout
+				</BaseButton>
+			</BaseDropdown>
 		</div>
 	</header>
 </template>
