@@ -17,7 +17,7 @@ const currentSelection = ref("claim");
 <template>
 	<section class="latest-activities flex flex-col gap-[0.4rem] overflow-hidden rounded-[1.2rem]">
 		<p class="text-[1.4rem] leading-[2.4rem] text-gray-500">Latest activities</p>
-		<div class="latest-activities__content min-h-[35.9rem] bg-white">
+		<div class="latest-activities__content min-h-[38.9rem] bg-white">
 			<div class="latest-activities__group p-[1.2rem] pb-[1.7rem]">
 				<LoadingShimmer v-if="isLoading" class="h-[4rem] w-[13rem] rounded-[0.8rem]" />
 				<BaseButtonGroup v-else v-model="currentSelection" :group="buttonGroup" />

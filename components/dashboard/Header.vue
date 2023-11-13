@@ -5,7 +5,13 @@ interface Emits {
 
 defineEmits<Emits>();
 
-const { user } = useUserStore();
+const { user, reset } = useUserStore();
+const showDropdown = ref(false);
+
+const logout = () => {
+	reset();
+	navigateTo({ name: "login" });
+};
 </script>
 
 <template>
@@ -21,12 +27,18 @@ const { user } = useUserStore();
 				<NuxtIcon name="bell-line" filled />
 				<BaseDot class="absolute right-[-0.4rem] top-[-0.6rem] h-[1.2rem] w-[1.2rem]" variant="error-500" />
 			</div>
-			<div class="flex cursor-pointer items-center gap-[1.8rem]">
+			<div class="relative flex cursor-pointer items-center gap-[1.8rem]" @click.stop="showDropdown = true">
 				<img src="/images/avatar.png" class="h-[4rem] w-[4rem] rounded object-cover" alt="User avatar" />
 				<p class="hidden items-center gap-[0.9rem] text-[1.4rem] font-semibold leading-[1.6rem] text-dark sm:flex">
 					Hello {{ user?.name }}
 					<NuxtIcon name="dropdown" filled />
 				</p>
+				<BaseDropdown :show="showDropdown" class="top-[4.6rem]" @close="showDropdown = false">
+					<BaseButton class="gap-4 px-[1rem] py-[1.6rem]" @click.stop="logout">
+						<NuxtIcon name="logout" filled />
+						Logout
+					</BaseButton>
+				</BaseDropdown>
 			</div>
 		</div>
 	</header>
