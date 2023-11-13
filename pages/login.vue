@@ -8,8 +8,8 @@ definePageMeta({
 });
 
 useSeoMeta({
-	title: "Login | MyCoverAI"
-})
+	title: "Login | MyCoverAI",
+});
 
 const { loginWithEmailPassword } = useAuth();
 const { setUser } = useUserStore();

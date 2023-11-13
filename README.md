@@ -12,15 +12,15 @@ This was built primarily using Nuxt, Typescript, TailwindCSS for styling and Pin
 
 ## Packages installed
 
-+ ESLint/Prettier - Linting and Code formatting
-+ Nuxt-Vitest, Happy-DOM, Vue-Test-Utils - Code testing
-+ [NuxtIcons](https://nuxt.com/modules/icons) - Dynamically loading svgs in the assets/icon folder and render on the page
-+ [Pinia-persisted-state](https://prazdevs.github.io/pinia-plugin-persistedstate/) - For persisting the pinia stored to the cookie storage.
-+ SASS - This was used for handling of custom styles
-+ [Vue3RadialProgress](https://vue3-radial-progress.vercel.app/) - Component used for displaying the progress bar component
-+ [Vuelidate](https://vuelidate-next.netlify.app/) - This was used for form validations
-+ [Vue Charts](https://vue-chart-3.netlify.app/guide/#introduction) - Chart Library for displaying Bar chart component
-+ [VueUse](https://vueuse.org/) - Useful for onClickOutside (performing action when a click happens outside of a component), useWindowSize (getting device width)
+-   ESLint/Prettier - Linting and Code formatting
+-   Nuxt-Vitest, Happy-DOM, Vue-Test-Utils - Code testing
+-   [NuxtIcons](https://nuxt.com/modules/icons) - Dynamically loading svgs in the assets/icon folder and render on the page
+-   [Pinia-persisted-state](https://prazdevs.github.io/pinia-plugin-persistedstate/) - For persisting the pinia stored to the cookie storage.
+-   SASS - This was used for handling of custom styles
+-   [Vue3RadialProgress](https://vue3-radial-progress.vercel.app/) - Component used for displaying the progress bar component
+-   [Vuelidate](https://vuelidate-next.netlify.app/) - This was used for form validations
+-   [Vue Charts](https://vue-chart-3.netlify.app/guide/#introduction) - Chart Library for displaying Bar chart component
+-   [VueUse](https://vueuse.org/) - Useful for onClickOutside (performing action when a click happens outside of a component), useWindowSize (getting device width)
 
 ## Setup
 
