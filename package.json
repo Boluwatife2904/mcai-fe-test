@@ -11,7 +11,8 @@
 		"lint:js": "eslint --ext \".ts,.vue\" --ignore-path .gitignore .",
 		"lint:prettier": "prettier --check .",
 		"lint": "yarn lint:js && yarn lint:prettier",
-		"lintfix": "prettier --write --list-different . && yarn lint:js --fix"
+		"lintfix": "prettier --write --list-different . && yarn lint:js --fix",
+		"test": "vitest"
 	},
 	"devDependencies": {
 		"@nuxt/devtools": "latest",
@@ -19,16 +20,21 @@
 		"@nuxtjs/tailwindcss": "^6.9.4",
 		"@pinia-plugin-persistedstate/nuxt": "^1.2.0",
 		"@typescript-eslint/parser": "^6.10.0",
+		"@vitejs/plugin-vue": "^4.4.1",
+		"@vue/test-utils": "^2.4.1",
 		"@vueuse/core": "^10.6.0",
 		"eslint": "^8.53.0",
 		"eslint-config-prettier": "^9.0.0",
 		"eslint-plugin-prettier": "^5.0.1",
+		"happy-dom": "^12.10.3",
 		"nuxt": "^3.8.1",
 		"nuxt-icons": "^3.2.1",
 		"prettier": "^3.0.3",
 		"prettier-plugin-tailwindcss": "^0.5.7",
 		"sass": "^1.69.5",
 		"typescript": "^5.2.2",
+		"unplugin-auto-import": "^0.16.7",
+		"vitest": "^0.34.6",
 		"vue": "^3.3.8",
 		"vue-router": "^4.2.5"
 	},

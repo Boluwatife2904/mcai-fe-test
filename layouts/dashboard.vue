@@ -1,5 +1,7 @@
 <script setup lang="ts">
-const { isOnMobile } = useDeviceWidthChecker();
+import { useWindowSize } from "@vueuse/core";
+
+const { width } = useWindowSize();
 const route = useRoute();
 
 const sidebarIsOpen = ref(false);
@@ -8,8 +10,8 @@ const toggleSidebar = () => {
 	sidebarIsOpen.value = !sidebarIsOpen.value;
 };
 
-watch(isOnMobile, (newValue) => {
-	if (!newValue) sidebarIsOpen.value = false;
+watch(width, (newWidth) => {
+	if (newWidth > 768) sidebarIsOpen.value = false;
 });
 
 watch(

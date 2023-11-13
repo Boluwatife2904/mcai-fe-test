@@ -11,7 +11,11 @@ export const useUserStore = defineStore(
 
 		const userIsAuthenticated = computed(() => !!user.value);
 
-		return { user, userIsAuthenticated, setUser };
+		const reset = () => {
+			user.value = null;
+		};
+
+		return { user, userIsAuthenticated, setUser, reset };
 	},
 	{
 		persist: true,
